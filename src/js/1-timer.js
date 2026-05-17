@@ -6,6 +6,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 const btn = document.querySelector('button');
 btn.setAttribute('disabled', '');
+let userSelectedDate;
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -28,7 +29,7 @@ const options = {
 };
 flatpickr('#datetime-picker', options);
 
-let userSelectedDate;
+
 
 console.log(userSelectedDate);
 
@@ -97,5 +98,5 @@ function convertMs(ms) {
 
 function addLeadingZero(value) {
   const fullNumber = value.toString().padStart(2, '0');
-  return fullNumber;btn.setAttribute('disabled', '');
+  return fullNumber;
 }
