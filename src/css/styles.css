@@ -65,3 +65,7 @@ legend {
 fieldset {
   margin-bottom: 20px;
 }
+.header {
+  align-self: flex-start;
+  margin-left: 50px;
+}
