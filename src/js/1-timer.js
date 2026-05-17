@@ -4,7 +4,8 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-
+const btn = document.querySelector('button');
+btn.setAttribute('disabled', '');
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -31,7 +32,7 @@ let userSelectedDate;
 
 console.log(userSelectedDate);
 
-const btn = document.querySelector('button');
+
 const input = document.querySelector('#datetime-picker');
 const daysVal = document.querySelector('[data-days]');
 const hoursVal = document.querySelector('[data-hours]');
@@ -48,7 +49,7 @@ function handleStartClick(event) {
   function updateCount() {
     if (timeDiff < 1000) {
       clearInterval(intervalId);
-      btn.removeAttribute('disabled');
+      
       input.removeAttribute('disabled');
       daysVal.textContent = '00';
       hoursVal.textContent = '00';
@@ -96,5 +97,5 @@ function convertMs(ms) {
 
 function addLeadingZero(value) {
   const fullNumber = value.toString().padStart(2, '0');
-  return fullNumber;
+  return fullNumber;btn.setAttribute('disabled', '');
 }
